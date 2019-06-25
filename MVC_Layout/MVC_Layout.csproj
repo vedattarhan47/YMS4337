@@ -98,6 +98,7 @@
   <ItemGroup>
     <Content Include="Areas\Admin\Content\css\sb-admin.css" />
     <Content Include="Areas\Admin\Content\css\sb-admin.min.css" />
+    <Content Include="Areas\Admin\Content\js\colvis.js" />
     <Content Include="Areas\Admin\Content\js\demo\chart-area-demo.js" />
     <Content Include="Areas\Admin\Content\js\demo\chart-bar-demo.js" />
     <Content Include="Areas\Admin\Content\js\demo\chart-pie-demo.js" />
