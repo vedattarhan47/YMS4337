@@ -12,7 +12,6 @@
     </div>
     <div class="card-body">
         <div class="table-responsive">
-
             <table id="categories" class="display nowrap table table-hover" style="width:100%">
                 <thead>
                     <tr>
@@ -37,7 +36,6 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.css" rel="stylesheet" />
     <link href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap4.min.css" rel="stylesheet" />
     <link href="https://cdn.datatables.net/buttons/1.5.1/css/buttons.dataTables.min.css" rel="stylesheet" />
-
 }
 
 @section js{
@@ -52,13 +50,11 @@
     <script src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.print.min.js"></script>
     <script src="https://cdn.datatables.net/colreorder/1.5.1/js/dataTables.colReorder.min.js"></script>
     <script src="https://cdn.datatables.net/fixedcolumns/3.2.6/js/dataTables.fixedColumns.min.js"></script>
-     
-    <script src="~/Areas/Admin/Content/js/colvis.js"></script> 
-
+    <script src="~/Areas/Admin/Content/js/colvis.js"></script>
     <script>
         $(document).ready(function () {
             $("#categories").DataTable({
-
+                "pageLength": 5,
                 ajax: {
                     url: "/Admin/Categories/_Index",
                     dataSrc: "",
@@ -72,10 +68,10 @@
                     { "title": "Kategori Açıklama", data: "Description" }
                 ],
                 "columnDefs": [
-                    //{ targets: 0, "width": "50px" }
+                    // { targets: 0, "width": "50px" }
                 ],
                 dom: 'Bfrtip',
-                buttons: [ 
+                buttons: [
                     {
                         extend: 'copyHtml5',
                         exportOptions: {
@@ -97,27 +93,15 @@
                     'colvis'
                 ],
                 colReorder: true,
-               
             })
         }).ajaxComplete(function () {
-
             $("#categories").removeClass("dataTable")
             $(".buttons-copy,.buttons-pdf,.buttons-collection,.buttons-excel").removeClass("buttons-html5").removeClass("dt-button").addClass("btn").addClass("btn-outline-dark").addClass("mb-2")
         });
-
-
-        
     </script>
-
-
     <script>
-
-
-
         $(document).on("click", ".buttons-collection", function () {
-        
             $(".buttons-columnVisibility").addClass("btn btn-success").removeClass("dt-button")
-
             $("div.dt-button-collection").addClass("card card-body")
         })
         $(document).on("click", ".buttons-columnVisibility", function () {
