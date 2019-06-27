@@ -3,6 +3,7 @@ using System.Linq;
 using System.Web.Mvc;
 namespace MVC_Layout.Areas.Admin.Controllers
 {
+    [Authorize]
     public class CategoriesController : Controller
     {
         NorthwindEntities db = new NorthwindEntities();

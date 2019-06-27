@@ -26,5 +26,6 @@ namespace MVC_Layout.Areas.Admin.Models
         }
     
         public virtual DbSet<Category> Categories { get; set; }
+        public virtual DbSet<User> Users { get; set; }
     }
 }

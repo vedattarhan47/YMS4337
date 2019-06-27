@@ -12,10 +12,11 @@ namespace MVC_Layout.Areas.Admin.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Category
+    public partial class User
     {
-        public int CategoryID { get; set; }
-        public string CategoryName { get; set; }
-        public string Description { get; set; }
+        public int Id { get; set; }
+        public string UserName { get; set; }
+        public string Password { get; set; }
+        public string Email { get; set; }
     }
 }
