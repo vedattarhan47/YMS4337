@@ -25,9 +25,9 @@
     <!-- Izitoast Notification CSS -->
     <link rel="stylesheet" media="screen" href="~/Content/css/izitoast.css">
     <!-- Main Style CSS -->
-    <link rel="stylesheet" media="screen" href="~/Content/css/style.css"> 
+    <link rel="stylesheet" media="screen" href="~/Content/css/style.css">
 </head>
-<body> 
+<body>
     <!-- Start Shop Category Menu -->
     <div class="offcanvas-container" id="shop-categories">
         <div class="offcanvas-header">
@@ -625,7 +625,7 @@
     <div class="offcanvas-wrapper">
 
         @RenderBody()
-          
+
         <!-- Start Footer -->
         <footer class="site-footer">
             <div class="container">
@@ -725,6 +725,11 @@
     <script src="~/Content/js/modernizr.min.js"></script>
     <!-- JQuery JS -->
     <script src="~/Content/js/jquery.min.js"></script>
+
+
+    @RenderSection("productJs", required: false)
+
+
     <!-- Popper JS -->
     <script src="~/Content/js/popper.min.js"></script>
     <!-- Bootstrap JS -->
@@ -749,5 +754,7 @@
     <script src="~/Content/js/velocity.min.js"></script>
     <!-- Main JS -->
     <script src="~/Content/js/script.js"></script>
+
+
 </body>
 </html>
